@@ -90,3 +90,19 @@ const high5 = function () {
 document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+//
+
+// const greet = function (greeting) {
+//   return function (names) {
+//     console.log(`${greeting} ${names}`);
+//   };
+// };
+
+const greet = greeting => names => console.log(`${greeting} ${names}`);
+
+const greeterHey = greet(`Hey`);
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Victoria');
