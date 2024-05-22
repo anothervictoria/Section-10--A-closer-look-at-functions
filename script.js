@@ -272,3 +272,21 @@ poll.displayResults.call({ answers: [5, 3, 2] }, 'string');
 // poll.registerNewAnswer();
 
 //----------------
+
+const runOnce = function () {
+  console.log('This will never run again');
+};
+
+// Immediately invoked function expression
+(function () {
+  console.log('This will never run again 2');
+})();
+
+(() => console.log('This will ALSO never run again'))();
+
+{
+  const isPrivate = 23;
+  var notPrivate = 46;
+}
+// console.log(isPrivate);
+console.log(notPrivate);
